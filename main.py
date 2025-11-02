@@ -100,6 +100,8 @@ try:
 except KeyError:
     st.warning("Column 'age_midpoint' not found.")
 
+st.header("""State the relationship between age vs. reason_for_addiction.""")
+
 # --- Marital Status of Addicts (Pie Chart) ---
 st.subheader("Marital Status of Addicts")
 try:
