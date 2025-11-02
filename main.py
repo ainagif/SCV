@@ -35,7 +35,7 @@ if not arts_df.empty:
     
     st.success("Analyzing Demographics and Key Triggers of Drug Use")
 
- import streamlit as st
+import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
