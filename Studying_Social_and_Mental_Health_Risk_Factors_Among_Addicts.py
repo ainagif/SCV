@@ -110,6 +110,8 @@ try:
 except KeyError:
     st.warning("One or more columns ('friends_influence', 'failure_in_life_numeric') not found.")
 
+st.success("""Data show that individuals who report no failures in life still have high frequency of drug use when peer influence is significant, either 'They often do it' or 'Sometimes'. This proves that peer pressure acts as a continuous pathway that facilitates the initiation of substance use.""")
+
 # --- Type of Addiction by Family History of Drug Use (Grouped Bar Plot) ---
 st.subheader("Type of Addiction by Family History of Drug Use")
 try:
