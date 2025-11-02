@@ -1,41 +1,42 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-
-# --- Re-Load Data within this Page File ---
-url = 'https://raw.githubusercontent.com/ainagif/SCV/refs/heads/main/df.csv'
-
-@st.cache_data
-def load_data(data_url):
-    """Loads the dataframe from the URL."""
-    try:
-        arts_df = pd.read_csv(data_url)
-        return arts_df
-    except Exception as e:
-        st.error(f"Error loading data: {e}")
-        return pd.DataFrame()
-
-df = load_data(url) # The DataFrame must be named 'df' (or the variable you use)
-
-if df.empty:
-    st.info("Cannot display visualization: Data failed to load.")
-    st.stop()
-    
-# --- Visualization Code (Corrected) ---
-
-
 st.success("""Based on the display shown, it shows a summary of the demographic and mental health risk profile of the addict population studied. The data has shown that addiction focuses on 'young adults' with the 'Most Common Age Range' being at the age of '20-25 years' which initially shows that early onset is common. Looking at the social angle, the value achieved, which is 67.9%, is from 'Not Married'. It clearly shows that addiction is very high among those who do not have a partner or are married. In addition, the 'High Risk Group' metric has shown several dangerous factors, namely individuals with an educational level of 'Bachelor's/Undergraduate' have contributed the highest number in the 'Poor Mental Health' category, which is 79 individuals. It is clear that the data shows that there is a great risk among individuals with a low university education level and at the same time facing mental stress problems. Next, the majority have reported 'Never' having a 'Family History of Drug Use' thus showing that risk factors are often personal and not due to heredity""")
 
+# ... (Continue with the visualization code blocks below this line) ...
 
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric(
+    label="Most Frequent Age Range", 
+    value=f"{most_frequent_age_range}", 
+    help="Peak frequency of addiction initiation/diagnosis falls between 20-25 years."
+)
+col2.metric(
+    label="Unmarried Percentage", 
+    value=f"{unmarried_percentage}%", 
+    help="Percentage of addicts identified as Unmarried (67.9% from Pie Chart)."
+)
+col3.metric(
+    label="Family History of Drug Use", 
+    value="Never (Highest Count)", 
+    help="Majority of Single Drug addicts reported never having a family history of drug use."
+)
+col4.metric(
+    label="High Risk Group (Education/MH)", 
+    value=f"{high_risk_mental_health_group}", 
+    help="The Undergraduate/Under Degree group has the highest overall count, with 79 reporting Poor Mental Health."
+)
+
+st.markdown("---")
+
+# ... (Continue with the visualization code blocks below this line) ...
+
+# --- 5. Section 2: Social and Mental Health Risk Factors ---
 st.success("Studying Social and Mental Health Risk Factors Among Addicts")
 
-# The problematic code needs correction. It should use 'df' and be part of a Plotly call.
-
+# --- Friends Influence vs. Failure in Life (Bar Chart) ---
 st.subheader("Friends Influence vs. Failure in Life")
 try:
-    # CORRECTION: Using 'df.sort_values' within the px.bar call
     fig_bar1 = px.bar(
-        df.sort_values(by='friends_influence'), 
+        df.sort_values(by='friends_influence'),
         x='friends_influence',
         color='failure_in_life_numeric',
         title='Friends Influence vs. Failure in Life',
@@ -46,9 +47,7 @@ try:
     fig_bar1.update_layout(xaxis_title='Friends Influence', yaxis_title='Count')
     st.plotly_chart(fig_bar1, use_container_width=True)
 except KeyError:
-    st.warning("One or more required columns not found for the first bar chart.")
-
-# ... (Include all other charts for this page here) ...
+    st.warning("One or more columns ('friends_influence', 'failure_in_life_numeric') not found.")
 
 # --- Type of Addiction by Family History of Drug Use (Grouped Bar Plot) ---
 st.subheader("Type of Addiction by Family History of Drug Use")
@@ -84,4 +83,3 @@ except KeyError:
     st.warning("One or more columns ('mental/emotional_problem', 'age_of_first_use_midpoint', 'smoking') not found.")
 
 st.markdown("---")
-
