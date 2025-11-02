@@ -47,6 +47,9 @@ except KeyError as e:
     mental_health_percentage = 65.0
     key_correlation = "Missing Data"
 
+st.header("""Analyzing Demographics and Key Triggers of Drug Use""")
+
+
 # --- 3. Key Findings Summary Box ---
 st.subheader("Key Findings Summary")
 
@@ -74,8 +77,6 @@ col4.metric(
 )
 
 st.markdown("---")
-
-st.header("""Analyzing Demographics and Key Triggers of Drug Use""")
 
 st.success("""Looking at the summary box displayed, it is based on visualization and summary from streamlit. It has stated several different profiles for the drug addict population studied, among which the analysis shows addiction among those affecting young adults with a Median Age of Addict after reaching the age of 22 years. Looking at the majority of the values ​​obtained, 67.9% are from the unmarried group. Therefore for the Most Common Marital Status. Looking at the risk factors, the value of 16.9% is achieved in the Poor/Moderate Mental Health category. And looking at the education aspect, the Most Common Education Level was Bachelor/Below Degree. In addition, according to the heat map shown, the largest group experiencing mental 'Poor' is 79 individuals. It thus marks a high-risk demographic that requires targeted intervention.
 . This metric collectively identifies young unmarried individuals with lower educational attainment and existing mental health problems as a priority focus group""")
