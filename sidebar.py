@@ -11,8 +11,8 @@ home = st.Page('home.py', title='Homepage', default=True, icon=":material/home:"
 # --- Define New Pages ---
 # 1. Page for Studying Social and Mental Health Risk Factors
 social_factors = st.Page(
-    'Studying Social and Mental Health Risk Factors Among Addicts.py', 
-    title='Studying Social and Mental Health Risk Factors Among Addicts', 
+    'Studying_Social_and_Mental_Health_Risk_Factors_Among_Addicts.py', 
+    title='Studying_Social_and_Mental_Health_Risk_Factors_Among_Addicts.py', 
     icon=":material/diversity_3:"
 )
 
