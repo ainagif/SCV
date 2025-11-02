@@ -100,7 +100,7 @@ try:
 except KeyError:
     st.warning("Column 'age_midpoint' not found.")
 
-st.subheader("State the relationship between age vs. reason_for_addiction")
+st.success("""State the relationship between age vs. reason_for_addiction""")
 
 # --- Marital Status of Addicts (Pie Chart) ---
 st.subheader("Marital Status of Addicts")
@@ -118,6 +118,8 @@ try:
     st.plotly_chart(fig_pie, use_container_width=True)
 except KeyError:
     st.warning("Column 'marital_status' not found.")
+
+st.success("""Relationship between gender vs. addicted_with. To identify patterns of gender differences in the types of substances most commonly abused.""")
 
 # --- Education Level vs. Mental Health Status (Heatmap) ---
 st.subheader("Education Level vs. Mental Health Status (Heatmap)")
@@ -141,5 +143,7 @@ except KeyError:
     st.warning("Columns 'education_level' or 'mental_health_status' not found.")
 
 st.markdown("---")
+
+st.suscess("""Relationship between education_level vs. mental_health_status.To explore the relationship between education level and reported mental health status """)
 
 # ... (Code above this line, including data loading into 'df', is omitted for brevity)
