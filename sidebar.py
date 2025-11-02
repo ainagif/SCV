@@ -18,8 +18,8 @@ social_factors = st.Page(
 
 # 2. Page for Identifying Correlations between Risk and Life Outcome
 correlations = st.Page(
-    'risk_correlation.py', 
-    title='Risk and Life Outcome', 
+    'Identifying Correlations between Risk and Life Outcome.py', 
+    title='Identifying Correlations between Risk and Life Outcome', 
     icon=":material/timeline:"
 )
 
