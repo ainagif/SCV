@@ -51,7 +51,7 @@ st.header("""Analyzing Demographics and Key Triggers of Drug Use""")
 
 
 # --- 3. Key Findings Summary Box ---
-st.subheader("Key Findings Summary")
+st.subheader("Key Findings Analyzing Demographics and Key Triggers of Drug Use")
 
 col1, col2, col3, col4 = st.columns(4)
     
@@ -236,7 +236,7 @@ except KeyError:
 st.markdown("---")
 
 # --- Key Findings Summary Box (Derived from Visual Analysis) ---
-st.subheader("Key Findings Summary")
+st.subheader("Key Findings Correlations between Risk and Life Outcome")
 
 # Metrics derived directly from the uploaded charts:
 most_frequent_age_range = "20 - 25 Years"
