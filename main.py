@@ -142,7 +142,7 @@ try:
 except KeyError:
     st.warning("Columns 'education_level' or 'mental_health_status' not found.")
 
-st.suscess("""Relationship between education_level vs. mental_health_status.To explore the relationship between education level and reported mental health status """)
+
 st.markdown("---")
 
 
