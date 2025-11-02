@@ -180,9 +180,6 @@ st.success("""Based on the display shown, it shows a summary of the demographic 
 
 # ... (Continue with the visualization code blocks below this line) ...
 
-# --- Key Findings Summary Box (Derived from Visual Analysis) ---
-st.subheader("Key Findings Studying Social and Mental Health Risk Factors Among Addicts")
-
 # Metrics derived directly from the uploaded charts:
 most_frequent_age_range = "20-25 years"
 unmarried_percentage = 67.9 # From Marital Status pie chart
