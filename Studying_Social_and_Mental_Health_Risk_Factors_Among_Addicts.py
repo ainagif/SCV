@@ -1,3 +1,30 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
+import seaborn as sns
+import numpy as np
+
+# --- Re-Load Data within this Page File ---
+url = 'https://raw.githubusercontent.com/ainagif/SCV/refs/heads/main/df.csv'
+
+@st.cache_data
+def load_data(data_url):
+    """Loads the dataframe from the URL."""
+    try:
+        arts_df = pd.read_csv(data_url)
+        return arts_df
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return pd.DataFrame()
+
+df = load_data(url) # The DataFrame must be named 'df' (or the variable you use)
+
+if df.empty:
+    st.info("Cannot display visualization: Data failed to load.")
+    st.stop()
+
 st.success("""Based on the display shown, it shows a summary of the demographic and mental health risk profile of the addict population studied. The data has shown that addiction focuses on 'young adults' with the 'Most Common Age Range' being at the age of '20-25 years' which initially shows that early onset is common. Looking at the social angle, the value achieved, which is 67.9%, is from 'Not Married'. It clearly shows that addiction is very high among those who do not have a partner or are married. In addition, the 'High Risk Group' metric has shown several dangerous factors, namely individuals with an educational level of 'Bachelor's/Undergraduate' have contributed the highest number in the 'Poor Mental Health' category, which is 79 individuals. It is clear that the data shows that there is a great risk among individuals with a low university education level and at the same time facing mental stress problems. Next, the majority have reported 'Never' having a 'Family History of Drug Use' thus showing that risk factors are often personal and not due to heredity""")
 
 # ... (Continue with the visualization code blocks below this line) ...
