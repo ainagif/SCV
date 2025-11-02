@@ -46,7 +46,7 @@ st.success("Studying Social and Mental Health Risk Factors Among Addicts")
 st.subheader("Friends Influence vs. Failure in Life")
 try:
     fig_bar1 = px.bar(
-        df.sort_values(by='friends_influence'),
+        art_df.sort_values(by='friends_influence'),
         x='friends_influence',
         color='failure_in_life_numeric',
         title='Friends Influence vs. Failure in Life',
