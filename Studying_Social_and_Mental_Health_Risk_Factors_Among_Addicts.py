@@ -147,6 +147,8 @@ try:
 except KeyError:
     st.warning("One or more columns ('mental/emotional_problem', 'age_of_first_use_midpoint', 'smoking') not found.")
 
+st.success("""This pattern clearly shows that for many individuals, drug use begins as a form of self-medication to deal with existing emotional problems, demonstrating untreated psychological vulnerabilities.""")
+
 st.markdown("---")
 
 
