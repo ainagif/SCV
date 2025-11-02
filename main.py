@@ -82,7 +82,7 @@ st.success("""Looking at the summary box displayed, it is based on visualization
 . This metric collectively identifies young unmarried individuals with lower educational attainment and existing mental health problems as a priority focus group""")
 
 # --- 4. Section 1: Demographics and Triggers ---
-st.success("Analyzing Demographics and Key Triggers of Drug Use")
+st.success("""The lowest incidence of cases is at the age extremes, such as the midpoint of 12 years and 52 years and older. While this suggests that addiction can occur at any age, it reinforces that young adults remain the epicenter of the crisis in the data set.""")
 
 # --- Distribution of Age Midpoints (Histogram) ---
 st.subheader("Distribution of Age Midpoints")
@@ -100,7 +100,7 @@ try:
 except KeyError:
     st.warning("Column 'age_midpoint' not found.")
 
-st.success("""State the relationship between age vs. reason_for_addiction""")
+st.success("""SThe data clearly shows that the unmarried group is the center of the drug addiction crisis in the data set, contributing to the highest value of 67.9% of the total cases.""")
 
 # --- Marital Status of Addicts (Pie Chart) ---
 st.subheader("Marital Status of Addicts")
