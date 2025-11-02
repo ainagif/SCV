@@ -53,7 +53,7 @@ st.success("Identifying Correlations between Risk and Life Outcome")
 st.subheader("Average Age Midpoint by Mental Health Status and Failure in Life")
 try:
     fig_bar3 = px.bar(
-        art_df,
+        df,
         x='mental_health_status',
         y='age_midpoint',
         color='failure_in_life_numeric',
