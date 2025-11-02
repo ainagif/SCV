@@ -115,11 +115,12 @@ st.success("Analyzing Demographics and Key Triggers of Drug Use")
 # ...
     
     # --- Visualization Section (Matplotlib/Seaborn to Plotly) ---
+# Line 119:
+# ... (end of previous code block)
 
-    ## 📊 Distribution of Age Midpoints (Histogram)
-    st.subheader("Distribution of Age Midpoints")
-    try:
-        fig_hist = px.histogram(
+    st.subheader("Distribution of Age Midpoints") # <--- CORRECT: Starts at the far left
+    fig_hist = px.histogram(...)
+    st.plotly_chart(fig_hist)
             df, 
             x='age_midpoint', 
             nbins=10, 
