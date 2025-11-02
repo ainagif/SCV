@@ -128,6 +128,8 @@ try:
 except KeyError:
     st.warning("One or more columns ('addicted_with', 'family_history_of_drug_use') not found.")
 
+st.success("""The data proves that while the addict population is largely driven by social and environmental disparities, family history itself is a reflection of the determined influence of the same socio-economic context.""")
+
 # --- Age of First Use Distribution by Mental/Emotional Problem and Smoking (Box Plot) ---
 st.subheader("Age of First Use Distribution by Mental/Emotional Problem and Smoking")
 try:
