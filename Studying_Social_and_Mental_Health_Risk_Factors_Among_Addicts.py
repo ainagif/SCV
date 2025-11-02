@@ -46,3 +46,38 @@ except KeyError:
 
 # ... (Include all other charts for this page here) ...
 
+# --- Type of Addiction by Family History of Drug Use (Grouped Bar Plot) ---
+st.subheader("Type of Addiction by Family History of Drug Use")
+try:
+    fig_bar2 = px.bar(
+        df.sort_values(by='addicted_with'),
+        x='addicted_with',
+        color='family_history_of_drug_use',
+        title='Type of Addiction by Family History of Drug Use',
+        barmode='group',
+        color_discrete_sequence=px.colors.qualitative.Bold
+    )
+    fig_bar2.update_layout(xaxis_title='Type of Addiction', yaxis_title='Count')
+    st.plotly_chart(fig_bar2, use_container_width=True)
+except KeyError:
+    st.warning("One or more columns ('addicted_with', 'family_history_of_drug_use') not found.")
+
+# --- Age of First Use Distribution by Mental/Emotional Problem and Smoking (Box Plot) ---
+st.subheader("Age of First Use Distribution by Mental/Emotional Problem and Smoking")
+try:
+    fig_box1 = px.box(
+        df,
+        x='mental/emotional_problem',
+        y='age_of_first_use_midpoint',
+        color='smoking',
+        title='Age of First Use Distribution by Mental/Emotional Problem and Smoking',
+        color_discrete_sequence=px.colors.qualitative.Dark24
+    )
+    fig_box1.update_xaxes(tickangle=45)
+    fig_box1.update_layout(xaxis_title='Mental/Emotional Problem', yaxis_title='Age of First Use (Midpoint)')
+    st.plotly_chart(fig_box1, use_container_width=True)
+except KeyError:
+    st.warning("One or more columns ('mental/emotional_problem', 'age_of_first_use_midpoint', 'smoking') not found.")
+
+st.markdown("---")
+
