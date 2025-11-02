@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Student Survey"
+    page_title="main"
 )
 
 # --- Define Existing Pages (Unchanged) ---
@@ -27,8 +27,7 @@ correlations = st.Page(
 # --- Update Navigation ---
 pg = st.navigation(
     {
-        "Menu": [home, visualise],
-        "Analysis": [social_factors, correlations] # Added new section for the analysis pages
+        "Menu": [home, visualise, social_analysis, correlations_analysis]# Added new section for the analysis pages
     }
 )
 
