@@ -266,6 +266,9 @@ col4.metric(
 
 st.markdown("---")
 
+st.success ("""Based on the summary above, the 'Summary of Key Findings' shows a combination of critical insights into the demographic and psychological profiles of the addict population. Looking at the data, it shows that addiction is highest in 'young adults' with the 'Peak Age Group' being '20-25 Years'. It shows that interventions should target this age range aggressively. Looking at the social aspect, the majority of addicts 'Not Married' have reached a value of 67.9% and in conclusion, it shows that marital status is a protective factor. Next, looking at the psychological aspect, the 'Highest Mental Health Risk' that has been identified is "Tension/Anxiety' which has displayed the highest frequency results in the relevant heat map for example Not Married vs. Mental/Emotional Problems. In addition, the 'Highest MH Termseckin Group' which has been identified as the 'Pre-degree/Undergraduate' level, this education group has achieved the highest value in the heat map and as many as 79 individuals 'Weak Mental Health' has outlined a very significant mental health crisis among those with lower levels of higher education.""")
+
+
 # ... (Continue with the visualization code blocks below this line) ...
 
 # --- 6. Section 3: Correlations between Risk and Life Outcome ---
@@ -288,8 +291,6 @@ try:
     st.plotly_chart(fig_bar3, use_container_width=True)
 except KeyError:
     st.warning("One or more columns ('mental_health_status', 'age_midpoint', 'failure_in_life_numeric') not found.")
-
-st.success ("""Based on the summary above, the 'Summary of Key Findings' shows a combination of critical insights into the demographic and psychological profiles of the addict population. Looking at the data, it shows that addiction is highest in 'young adults' with the 'Peak Age Group' being '20-25 Years'. It shows that interventions should target this age range aggressively. Looking at the social aspect, the majority of addicts 'Not Married' have reached a value of 67.9% and in conclusion, it shows that marital status is a protective factor. Next, looking at the psychological aspect, the 'Highest Mental Health Risk' that has been identified is "Tension/Anxiety' which has displayed the highest frequency results in the relevant heat map for example Not Married vs. Mental/Emotional Problems. In addition, the 'Highest MH Termseckin Group' which has been identified as the 'Pre-degree/Undergraduate' level, this education group has achieved the highest value in the heat map and as many as 79 individuals 'Weak Mental Health' has outlined a very significant mental health crisis among those with lower levels of higher education.""")
 
 # --- Marital Status vs. Mental/Emotional Problem (Heatmap) ---
 st.subheader("Marital Status vs. Mental/Emotional Problem (Heatmap)")
