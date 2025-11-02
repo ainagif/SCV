@@ -87,6 +87,8 @@ try:
 except KeyError:
     st.warning("One or more columns ('mental_health_status', 'age_midpoint', 'failure_in_life_numeric') not found.")
 
+st.success("""The data proves that existing psychological stress is a sufficient determining factor, as the frequency of drug use is high even among those who report no major life failures.""")
+
 # --- Marital Status vs. Mental/Emotional Problem (Heatmap) ---
 st.subheader("Marital Status vs. Mental/Emotional Problem (Heatmap)")
 try:
@@ -107,6 +109,8 @@ try:
     st.plotly_chart(fig_heatmap2, use_container_width=True)
 except KeyError:
     st.warning("Columns 'marital_status' or 'mental/emotional_problem' not found.")
+
+st.success("""Status Berkahwin Sebagai Faktor Perlindungan: Sebaliknya, individu yang berada dalam perhubungan (berkahwin/dalam hubungan) menunjukkan nilai yang lebih rendah dalam data, menunjukkan bahawa perkongsian hidup (perhubungan) mungkin bertindak sebagai faktor perlindungan yang penting, menawarkan sokongan emosi dan kestabilan.""")
     
 # --- Age of First Use Distribution by Religion and Type of Addiction (Box Plot) ---
 st.subheader("Age of First Use Distribution by Religion and Type of Addiction")
@@ -124,3 +128,5 @@ try:
     st.plotly_chart(fig_box2, use_container_width=True)
 except KeyError:
     st.warning("One or more columns ('religion', 'age_of_first_use_midpoint', 'addicted_with') not found.")
+
+st.success("""Belief Issues Are Not the Main Cause and the Consistency of the Initiation Pattern Across Majority Religious Groups (Muslims and Hindus) Proves That Religious Belief Issues or Understanding Are Not the Main Contributing Factors to the Initiation of Drug Use.""")
