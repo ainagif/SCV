@@ -142,6 +142,8 @@ try:
 except KeyError:
     st.warning("Columns 'education_level' or 'mental_health_status' not found.")
 
+st.success("""These findings emphasize that the main cause of substance abuse is psychological distress such as widespread depression, and this problem is not limited to individuals with low educational attainment.""")
+
 
 st.markdown("---")
 
