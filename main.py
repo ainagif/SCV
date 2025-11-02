@@ -180,12 +180,6 @@ st.success("""Based on the display shown, it shows a summary of the demographic 
 
 # ... (Continue with the visualization code blocks below this line) ...
 
-# Metrics derived directly from the uploaded charts:
-most_frequent_age_range = "20-25 years"
-unmarried_percentage = 67.9 # From Marital Status pie chart
-no_family_history_count = "Highest" # From Type of Addiction bar chart (Green bar is tallest)
-high_risk_mental_health_group = "Undergrad/Poor MH"
-
 col1, col2, col3, col4 = st.columns(4)
 
 col1.metric(
