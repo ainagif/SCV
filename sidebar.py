@@ -5,14 +5,14 @@ st.set_page_config(
 )
 
 # --- Define Existing Pages (Unchanged) ---
-visualise = st.Page('studentSurvey.py', title='Pencapaian Akademik Pelajar', icon=":material/school:")
+visualise = st.Page('main.py', title='main', icon=":material/school:")
 home = st.Page('home.py', title='Homepage', default=True, icon=":material/home:")
 
 # --- Define New Pages ---
 # 1. Page for Studying Social and Mental Health Risk Factors
 social_factors = st.Page(
-    '.py', 
-    title='Risk Factors (Social/Mental)', 
+    'Studying Social and Mental Health Risk Factors Among Addicts.py', 
+    title='Studying Social and Mental Health Risk Factors Among Addicts', 
     icon=":material/diversity_3:"
 )
 
