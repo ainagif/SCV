@@ -143,7 +143,7 @@ st.markdown("---")
 # ... (Code above this line, including data loading into 'df', is omitted for brevity)
 
 # --- Key Findings Summary Box (Derived from Visual Analysis) ---
-st.subheader("Key Findings Summary")
+st.subheader("Key Findings Studying Social and Mental Health Risk Factors Among Addicts")
 
 # Metrics derived directly from the uploaded charts:
 most_frequent_age_range = "20-25 years"
