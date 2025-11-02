@@ -227,6 +227,42 @@ except KeyError:
 
 st.markdown("---")
 
+# --- Key Findings Summary Box (Derived from Visual Analysis) ---
+st.subheader("Key Findings Summary")
+
+# Metrics derived directly from the uploaded charts:
+most_frequent_age_range = "20 - 25 Years"
+unmarried_percentage = "67.9%"
+top_mental_risk = "Tension/Anxiety"
+education_risk = "Undergrad/Poor MH"
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric(
+    label="Peak Age Group", 
+    value=f"{most_frequent_age_range}", 
+    help="Highest frequency of addiction at age midpoints between 20 and 25."
+)
+col2.metric(
+    label="Prevalence: Unmarried", 
+    value=f"{unmarried_percentage}", 
+    help="Percentage of addicts categorized as Unmarried (67.9% from Pie Chart)."
+)
+col3.metric(
+    label="Highest Mental Health Risk", 
+    value=f"{top_mental_risk}", 
+    help="The highest count of a single problem: Unmarried addicts reporting Tension/Anxiety (242)."
+)
+col4.metric(
+    label="Highest Poor MH Group", 
+    value=f"{education_risk}", 
+    help="The largest number reporting Poor Mental Health is the Undergraduate/Under Degree group (79)."
+)
+
+st.markdown("---")
+
+# ... (Continue with the visualization code blocks below this line) ...
+
 # --- 6. Section 3: Correlations between Risk and Life Outcome ---
 st.success("Identifying Correlations between Risk and Life Outcome")
 
