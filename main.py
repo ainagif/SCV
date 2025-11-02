@@ -134,6 +134,44 @@ except KeyError:
 
 st.markdown("---")
 
+# ... (Code above this line, including data loading into 'df', is omitted for brevity)
+
+# --- Key Findings Summary Box (Derived from Visual Analysis) ---
+st.subheader("Key Findings Summary")
+
+# Metrics derived directly from the uploaded charts:
+most_frequent_age_range = "20-25 years"
+unmarried_percentage = 67.9 # From Marital Status pie chart
+no_family_history_count = "Highest" # From Type of Addiction bar chart (Green bar is tallest)
+high_risk_mental_health_group = "Undergrad/Poor MH"
+
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric(
+    label="Most Frequent Age Range", 
+    value=f"{most_frequent_age_range}", 
+    help="Peak frequency of addiction initiation/diagnosis falls between 20-25 years."
+)
+col2.metric(
+    label="Unmarried Percentage", 
+    value=f"{unmarried_percentage}%", 
+    help="Percentage of addicts identified as Unmarried (67.9% from Pie Chart)."
+)
+col3.metric(
+    label="Family History of Drug Use", 
+    value="Never (Highest Count)", 
+    help="Majority of Single Drug addicts reported never having a family history of drug use."
+)
+col4.metric(
+    label="High Risk Group (Education/MH)", 
+    value=f"{high_risk_mental_health_group}", 
+    help="The Undergraduate/Under Degree group has the highest overall count, with 79 reporting Poor Mental Health."
+)
+
+st.markdown("---")
+
+# ... (Continue with the visualization code blocks below this line) ...
+
 # --- 5. Section 2: Social and Mental Health Risk Factors ---
 st.success("Studying Social and Mental Health Risk Factors Among Addicts")
 
