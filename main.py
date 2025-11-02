@@ -118,7 +118,7 @@ st.success("Analyzing Demographics and Key Triggers of Drug Use")
 # Line 119:
 # ... (end of previous code block)
 
-    st.subheader("Distribution of Age Midpoints") # <--- CORRECT: Starts at the far left
+st.subheader("Distribution of Age Midpoints") # <--- CORRECT: Starts at the far left
     fig_hist = px.histogram(...)
     st.plotly_chart(fig_hist)
             df, 
