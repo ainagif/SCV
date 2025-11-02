@@ -27,7 +27,7 @@ correlations = st.Page(
 # --- Update Navigation ---
 pg = st.navigation(
     {
-        "Menu": [home, visualise, social_analysis, correlations_analysis]# Added new section for the analysis pages
+        "Menu": [home, visualise, social_factors, correlations]# Added new section for the analysis pages
     }
 )
 
